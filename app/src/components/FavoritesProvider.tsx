@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react'
-import { getFavorites, toggleFavorite as toggleFav, isFavorite as isFav } from '@/lib/supabase'
+import { getFavorites, toggleFavorite as toggleFav } from '@/lib/supabase'
 
 interface FavoritesContextType {
   favoriteIds: string[]

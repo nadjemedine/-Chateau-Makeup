@@ -15,7 +15,7 @@ const checkoutSchema = z.object({
   address: z.string().optional(),
   city: z.string().min(2, 'La ville est requise'),
   state: z.string().min(2, 'La region est requise'),
-  delivery_type: z.enum(['maison', 'bureau'], { errorMap: () => ({ message: 'Veuillez choisir le type de livraison' }) }),
+  delivery_type: z.enum(['maison', 'bureau'], { message: 'Veuillez choisir le type de livraison' }),
 })
 
 type CheckoutForm = z.infer<typeof checkoutSchema>
